@@ -70,7 +70,7 @@
     .carousel {
       position: relative;
       width: 100%;
-      max-width: 600px;
+      max-width: 400px;
       margin: 40px auto;
       overflow: hidden;
       border-radius: 15px;
@@ -134,6 +134,51 @@
       transform: translateY(-2px);
     }
 
+    .social-media {
+      text-align: center;
+      margin: 30px 0;
+      padding: 20px;
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .social-media h3 {
+      color: #2E7D32;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 20px;
+      background: linear-gradient(135deg, #E91E63, #C2185B);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      transition: all 0.3s;
+      font-weight: 600;
+    }
+
+    .social-link:hover {
+      background: linear-gradient(135deg, #F06292, #AD1457);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(233, 30, 99, 0.3);
+    }
+
+    .social-link img {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -148,6 +193,14 @@
       }
       .feature img {
         width: 60px;
+      }
+      .social-links {
+        flex-direction: column;
+        align-items: center;
+      }
+      .social-link img {
+        width: 20px;
+        height: 20px;
       }
     }
   </style>
@@ -168,7 +221,7 @@
         <p>Convert chapter images into editable text instantly using AI.</p>
       </div>
       <div class="feature">
-        <img src="https://img.icons8.com/color/96/000000/quiz.png" alt="Smart Quizzes">
+        <img src="https://img.icons8.com/color/96/000000/questions.png" alt="Smart Quizzes">
         <h3>Smart Quizzes</h3>
         <p>Generate quizzes automatically from any chapter content for effective learning.</p>
       </div>
@@ -182,13 +235,19 @@
     <div class="carousel">
       <div class="carousel-track">
         <div class="carousel-slide">
-          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+1" alt="Screenshot 1">
+          <img src="images/screenshots/screenshot1.jpg" alt="App Home Screen">
         </div>
         <div class="carousel-slide">
-          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+2" alt="Screenshot 2">
+          <img src="images/screenshots/screenshot2.jpg" alt="Photo Capture Interface">
         </div>
         <div class="carousel-slide">
-          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+3" alt="Screenshot 3">
+          <img src="images/screenshots/screenshot3.jpg" alt="Quiz Generation">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/screenshots/screenshot4.jpg" alt="Quiz Results">
+        </div>
+        <div class="carousel-slide">
+          <img src="images/screenshots/screenshot5.jpg" alt="Progress Tracking">
         </div>
       </div>
     </div>
@@ -201,10 +260,20 @@
       <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank">Google Play</a>
     </div>
 
+    <div class="social-media">
+      <h3>Connect With Us</h3>
+      <div class="social-links">
+        <a href="https://www.instagram.com/snapchapterquiz/" target="_blank" class="social-link">
+          <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram">
+          Follow on Instagram
+        </a>
+      </div>
+    </div>
+
   </div>
 
   <footer>
-    &copy; 2025 Snap Chapter Quiz | Connect with us on social media
+    &copy; 2025 Snap Chapter Quiz
   </footer>
 
   <script>
