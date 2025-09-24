@@ -17,7 +17,28 @@
       background: linear-gradient(135deg, #4CAF50, #2E7D32);
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 20px 20px 60px 20px;
+      position: relative;
+    }
+
+    .header-download {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .play-store-btn {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+
+    .play-store-btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .play-store-btn img {
+      height: 50px;
+      width: auto;
     }
 
     header h1 {
@@ -120,18 +141,16 @@
     .download-buttons a {
       display: inline-block;
       margin: 10px;
-      padding: 15px 35px;
-      background: linear-gradient(135deg, #4CAF50, #2E7D32);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      border-radius: 12px;
-      transition: background 0.3s, transform 0.3s;
+      transition: transform 0.3s;
     }
 
     .download-buttons a:hover {
-      background: linear-gradient(135deg, #66BB6A, #1B5E20);
       transform: translateY(-2px);
+    }
+
+    .download-buttons img {
+      height: 60px;
+      width: auto;
     }
 
     .social-media {
@@ -202,12 +221,21 @@
         width: 20px;
         height: 20px;
       }
+      .header-download {
+        position: static;
+        margin-bottom: 20px;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
+    <div class="header-download">
+      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank" class="play-store-btn">
+        <img src="images/screenshots/Google_Play_Store_badge_EN.png" alt="Get it on Google Play">
+      </a>
+    </div>
     <h1>Snap Chapter Quiz</h1>
     <p>Transform photos into AI-based advanced quizzes in seconds!</p>
   </header>
@@ -257,7 +285,9 @@
     </div>
 
     <div class="download-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank">Google Play</a>
+      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank">
+        <img src="images/screenshots/Google_Play_Store_badge_EN.png" alt="Get it on Google Play">
+      </a>
     </div>
 
     <div class="social-media">
