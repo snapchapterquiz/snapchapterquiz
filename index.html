@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snap Chapter Quiz</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      margin-top: 15px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-bottom: 50px;
+    }
+
+    .feature {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+
+    .feature img {
+      width: 80px;
+      margin-bottom: 15px;
+    }
+
+    .feature h3 {
+      margin-top: 0;
+      color: #2E7D32;
+    }
+
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      margin: 40px auto;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      display: block;
+      border-radius: 15px;
+    }
+
+    .carousel-buttons {
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .carousel-buttons button {
+      background: #4CAF50;
+      border: none;
+      color: white;
+      padding: 10px 15px;
+      margin: 0 5px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .carousel-buttons button:hover {
+      background: #2E7D32;
+    }
+
+    .download-buttons {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .download-buttons a {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 35px;
+      background: linear-gradient(135deg, #4CAF50, #2E7D32);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 12px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .download-buttons a:hover {
+      background: linear-gradient(135deg, #66BB6A, #1B5E20);
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2em;
+      }
+      .feature img {
+        width: 60px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Snap Chapter Quiz</h1>
+    <p>Transform photos into AI-based advanced quizzes in seconds!</p>
+  </header>
+
+  <div class="container">
+
+    <section class="features">
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/document--v1.png" alt="Photo to Text">
+        <h3>Photo to Text</h3>
+        <p>Convert chapter images into editable text instantly using AI.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/quiz.png" alt="Smart Quizzes">
+        <h3>Smart Quizzes</h3>
+        <p>Generate quizzes automatically from any chapter content for effective learning.</p>
+      </div>
+      <div class="feature">
+        <img src="https://img.icons8.com/color/96/000000/training.png" alt="Progress Tracking">
+        <h3>Track Progress</h3>
+        <p>Monitor your quiz results and learning improvements over time.</p>
+      </div>
+    </section>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <div class="carousel-slide">
+          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+1" alt="Screenshot 1">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+2" alt="Screenshot 2">
+        </div>
+        <div class="carousel-slide">
+          <img src="https://via.placeholder.com/600x400.png?text=Screenshot+3" alt="Screenshot 3">
+        </div>
+      </div>
+    </div>
+    <div class="carousel-buttons">
+      <button onclick="prevSlide()">Prev</button>
+      <button onclick="nextSlide()">Next</button>
+    </div>
+
+    <div class="download-buttons">
+      <a href="https://play.google.com/store/apps/details?id=yourapp" target="_blank">Google Play</a>
+      <a href="#" target="_blank">App Store</a>
+    </div>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Snap Chapter Quiz | Connect with us on social media
+  </footer>
+
+  <script>
+    const track = document.querySelector('.carousel-track');
+    const slides = Array.from(track.children);
+    let currentIndex = 0;
+
+    function updateCarousel() {
+      track.style.transform = 'translateX(-' + currentIndex * 100 + '%)';
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    // Automatic slideshow every 3 seconds
+    setInterval(() => {
+      nextSlide();
+    }, 3000);
+  </script>
+
+</body>
+</html>
