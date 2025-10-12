@@ -33,6 +33,15 @@
   <meta name="apple-mobile-web-app-title" content="Snap Chapter Quiz">
   
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NWXNDMC4PG"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-NWXNDMC4PG');
+  </script>
   <style>
     body {
       margin: 0;
@@ -260,7 +269,7 @@
 
   <header>
     <div class="header-download">
-      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank" class="play-store-btn">
+      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank" class="play-store-btn" onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'Header Download Button', 'custom_parameter_name': 'header_download'});">
         <img src="images/screenshots/Google_Play_Store_badge_EN.png" alt="Get it on Google Play">
       </a>
     </div>
@@ -313,7 +322,7 @@
     </div>
 
     <div class="download-buttons">
-      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank">
+      <a href="https://play.google.com/store/apps/details?id=com.snapchapterquiz" target="_blank" onclick="gtag('event', 'click', {'event_category': 'Download', 'event_label': 'Bottom Download Button', 'custom_parameter_name': 'bottom_download'});">
         <img src="images/screenshots/Google_Play_Store_badge_EN.png" alt="Get it on Google Play">
       </a>
     </div>
